@@ -96,7 +96,7 @@ function renderGrid(){
       if (currentTile===1){
         image(raft, x*squareSize, y*squareSize, 60, 60);
       }
-      else if(currentTile===0){
+      else if(currentTile===0 || currentTile===2){
         rect(x*squareSize, y*squareSize, squareSize, squareSize);
 
       }
@@ -141,10 +141,11 @@ function raftSelectGreen(){
             rect(x*squareSize, (y-1)*squareSize, squareSize, squareSize);          
           }
           if(grid[y][x+1]===0){
-            if(x > raftOriginR+3){
+            if(x > raftOriginR+4){
               fill(255,0,0,100);
             }
-            else{fill(0,255,100,100);}            
+            else{
+            fill(0,255,100,100);}            
             rect((x+1)*squareSize, y*squareSize, squareSize, squareSize);
           }
           if(grid[y][x-1]===0){
