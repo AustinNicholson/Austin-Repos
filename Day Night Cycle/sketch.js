@@ -19,11 +19,24 @@ function setup() {
 
 function draw(){
   dayandNight();
+  print(Date.now()-start);
 }
 
 
 function dayandNight(){
   background(oceanColors[0]);
+  if(Date.now()-start>=20000){
+    background(oceanColors[1]);
+    if(Date.now()-start>=25000){
+      background(oceanColors[2]);
+      if(Date.now()-start>=35000){
+        background(oceanColors[1]);
+        if(Date.now()-start>=40000){
+          start = Date.now();
+    }
+    
+  }
 
-
+}
+}
 }
